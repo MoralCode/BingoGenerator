@@ -1,0 +1,29 @@
+header {
+    display: flex;
+}
+
+header > nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    margin: 0 .4em;
+    font-size: 1.4em;
+    list-style-type: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav li a#current {
+    font-weight: bold;
+    pointer-events: none;
+    cursor: default;
+}
