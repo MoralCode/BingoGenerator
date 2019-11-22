@@ -1,6 +1,10 @@
 <img src="assets/media/hallmarkbingo.png" />
 <nav>
     <ul>
-        <li>Generate</li>
+        {% for item in site.data.pages %}
+        <li>
+            <a id="{% if item.url == page.url %}current{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
     </ul>
 </nav>
