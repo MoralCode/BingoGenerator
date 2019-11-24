@@ -27,3 +27,41 @@ nav li a#current {
     pointer-events: none;
     cursor: default;
 }
+
+
+main {
+    display: flex;
+}
+
+main > * {
+    /* height: 100%; */
+    flex: 1 1 auto;
+}
+
+label {
+    display: block;
+    margin: 10px;
+    /* width: */
+}
+
+div.option {
+    display: flex;
+    justify-content: center;
+    margin: .4em;
+}
+
+div.option > * {
+    flex: 0 0 auto;
+}
+
+
+
+input[type=number] {
+    width: 40px;
+}
+
+div#instructions {
+    max-width: 600px;
+    flex: 0 1 auto;
+    
+}
