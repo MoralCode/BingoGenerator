@@ -42,27 +42,44 @@ clicheBingoList = [
     "Kissing Under Mistletoe"
 ]
 
-
-
-
-
-function randomlyPopulateTable(table, rows, columns, values) {
+/**
+ * returns a 2d array representing a randomized arrangement of board tiles.
+ * @param {*} rows the number of rows the board should have
+ * @param {*} columns the number of columns the board should have
+ * @param {*} values the array of values to randomly pull from
+ */
+function randomizeOptions(rows, columns, values) {
 
     //duplicate values array so we can mutate it and not mess the real one up
     data = Array.from(values);
     data = shuffle(data);
+    board = []
 
-    for (r=0; r<rows; r++) {
+    if (values.length < (rows * columns))
+        console.warn("Not enough options to fill a " +rows + "x" + columns + " board without duplicates")
+        //maybe fallback to using duplicate items
+
+    for (r = 0; r < rows; r++) {
+        row = []
+        for (c = 0; c < columns; c++) {
+            row[c] = data.shift(); //https://stackoverflow.com/a/29606016
+        }
+        board[r] = row
+    }
+    return board
+}
+
+
+function randomlyPopulateTable(table, board) {
+    for (r=0; r < board.length-1; r++) {
         row = document.createElement("tr");
 
-        for (c = 0; c < columns; c++) {
+        for (c = 0; c < board[0].length - 1; c++) {
             value = document.createElement("td");
-            value.innerText = data.shift(); //https://stackoverflow.com/a/29606016
+            value.innerText = board[r][c];
             row.appendChild(value)
         }
-
         table.appendChild(row);
-        
     }
 }
 
