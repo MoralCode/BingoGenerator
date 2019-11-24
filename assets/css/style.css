@@ -29,11 +29,11 @@ nav li a#current {
 }
 
 
-main {
+.sidebyside {
     display: flex;
 }
 
-main > * {
+.sidebyside > * {
     /* height: 100%; */
     flex: 1 1 auto;
 }
