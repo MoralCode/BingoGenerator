@@ -86,4 +86,23 @@ function shuffle(array) {
     return array;
 }
 
-randomlyPopulateTable(document.getElementById("gameboard"), 5,5,clicheBingoList)
+//https://stackoverflow.com/a/42916772
+function toDataURL(url) {
+    return new Promise(
+        (resolve, reject) => {
+            if (url == null)  reject()
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', url);
+        xhr.responseType = 'blob';
+        xhr.onload = function () {
+            var fr = new FileReader();
+
+            fr.onload = () => resolve(fr.result);
+
+            fr.readAsDataURL(xhr.response); // async call
+        };
+
+        xhr.send();
+    });
+}
+randomlyPopulateTable(document.getElementById("gameboard"), 5, 5, clicheBingoList)
