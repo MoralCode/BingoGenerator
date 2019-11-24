@@ -105,4 +105,37 @@ function toDataURL(url) {
         xhr.send();
     });
 }
+
+
+
+async function getPDF() {
+
+    var docDefinition = {
+        content: [
+            {
+                image: 'logo'
+            }
+        ],
+        images: {
+
+        }
+    };
+
+    // var doc = new jsPDF("portrait", "pt", "letter")
+
+    //wait for the image to be added first
+    await toDataURL("assets/media/hallmarkbingo.png")
+    .then((uri) => {
+        docDefinition.images.logo = uri
+        
+    })
+    .catch((error) => {console.error(error)});
+
+    
+    pdf = pdfMake.createPdf(docDefinition);
+
+    pdf.open();
+}
+
 randomlyPopulateTable(document.getElementById("gameboard"), 5, 5, clicheBingoList)
+getPDF()
