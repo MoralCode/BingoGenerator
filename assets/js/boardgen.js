@@ -70,7 +70,7 @@ function randomizeOptions(rows, columns, values) {
 }
 
 
-function randomlyPopulateTable(table, board) {
+function populateTable(table, board) {
     for (r=0; r < board.length-1; r++) {
         row = document.createElement("tr");
 
@@ -154,5 +154,7 @@ async function getPDF() {
     pdf.open();
 }
 
-randomlyPopulateTable(document.getElementById("gameboard"), 5, 5, clicheBingoList)
+
+board = randomizeOptions(5, 5, clicheBingoList);
+populateTable(document.getElementById("gameboard"), board);
 getPDF()
