@@ -71,10 +71,10 @@ function randomizeOptions(rows, columns, values) {
 
 
 function populateTable(table, board) {
-    for (r=0; r < board.length-1; r++) {
+    for (r=0; r < board.length; r++) {
         row = document.createElement("tr");
 
-        for (c = 0; c < board[0].length - 1; c++) {
+        for (c = 0; c < board[0].length; c++) {
             value = document.createElement("td");
             value.innerText = board[r][c];
             row.appendChild(value)
