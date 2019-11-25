@@ -131,7 +131,7 @@ function toDataURL(url) {
 
 
 
-async function getPDF() {
+async function getPDFTemplate(board) {
 
     var docDefinition = {
         content: [
@@ -154,11 +154,10 @@ async function getPDF() {
     })
     .catch((error) => {console.error(error)});
 
-    
-    pdf = pdfMake.createPdf(docDefinition);
-
-    pdf.open();
+    return docDefinition
 }
+
+
 
 
 board = randomizeOptions(5, 5, board_values.cliche);
