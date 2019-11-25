@@ -139,6 +139,33 @@ async function getPDFTemplate(board) {
                 image: 'logo',
                 margin: [0, 0, 0, 20]
             },
+            //this is a workaround to center the table.
+            //see https://github.com/bpampuch/pdfmake/issues/72
+            {
+                columns: [
+                    { width: '*', text: '' },
+                    {
+                        width: 'auto',
+                        table: {
+                            // headers are automatically repeated if the table spans over multiple pages
+                            // you can declare how many rows should be treated as headers
+                            headerRows: 0,
+
+                            widths: [100, 100, 100, 100],
+                            heights: [100, 100, 100, 100],
+                            alignment: 'center',
+                            body: [
+                                ['First', 'Second', 'Third', 'The last one'],
+                                ['Value 1', 'Value 2', 'Value 3', 'Value 4'],
+                                [{ text: 'Bold value', bold: true, alignment: 'center' }, 'Val 2', 'Val 3', 'Val 4']
+                            ]
+                        }
+                    },
+                    { width: '*', text: '' },
+                ]
+            },
+            //end workaround
+
         ],
         images: {
 
