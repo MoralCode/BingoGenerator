@@ -192,5 +192,12 @@ document.getElementById("generate").onclick = () => {
     board = randomizeOptions(5, 5, board_values.cliche);
     populateTable(document.getElementById("gameboard"), board);
     getPDFTemplate(board)
-        .then((template) => pdfMake.createPdf(template).open());
+        .then((template) => pdfMake.createPdf(template).getDataUrl(
+            (dataUrl) => {
+                const targetElement = document.querySelector('#pdfinline');
+                const iframe = document.createElement('iframe');
+                iframe.src = dataUrl;
+                targetElement.appendChild(iframe);
+            })
+        );
 }
