@@ -136,8 +136,9 @@ async function getPDFTemplate(board) {
     var docDefinition = {
         content: [
             {
-                image: 'logo'
-            }
+                image: 'logo',
+                margin: [0, 0, 0, 20]
+            },
         ],
         images: {
 
