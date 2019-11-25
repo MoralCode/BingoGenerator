@@ -78,3 +78,8 @@ table td {
 }
 
 /* hide generation form elements and nav in print stylesheets */
+
+iframe {
+    width: 50vw;
+    height: 100vw;
+}
