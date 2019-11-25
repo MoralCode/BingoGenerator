@@ -77,6 +77,11 @@ function randomizeOptions(rows, columns, values) {
 
 
 function populateTable(table, board) {
+    //https://stackoverflow.com/a/3955238
+    while (table.firstChild) {
+        table.removeChild(table.firstChild);
+    }
+
     for (r=0; r < board.length; r++) {
         row = document.createElement("tr");
 
