@@ -134,6 +134,7 @@ function toDataURL(url) {
 async function getPDFTemplate(board) {
 
     var docDefinition = {
+        pageSize: 'LETTER',
         content: [
             {
                 image: 'logo',
@@ -186,8 +187,10 @@ async function getPDFTemplate(board) {
 }
 
 
+document.getElementById("generate").onclick = () => {
 
-
-board = randomizeOptions(5, 5, board_values.cliche);
-populateTable(document.getElementById("gameboard"), board);
-getPDF()
+    board = randomizeOptions(5, 5, board_values.cliche);
+    populateTable(document.getElementById("gameboard"), board);
+    getPDFTemplate(board)
+        .then((template) => pdfMake.createPdf(template).open());
+}
