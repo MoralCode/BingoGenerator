@@ -1,46 +1,52 @@
-clicheBingoList = [ 
-    "Truck", 
-    "Christmas Event", 
-    "Misunderstanding", 
-    "Brooks Brothers", 
-    "Laser eyes(each other)", 
-    "Single Mom", 
-    "One parent is dead", 
-    "Charity Santa", 
-    "Interrupted Moment(almost kiss)", 
-    "Decorating", 
-    "Laser Eyes (him to her)", 
-    "Blonde", 
-    "Money Trouble", 
-    "Car Crash", 
-    "Both parents are dead", 
-    "Christmas Baking", 
-    "Blue Collar Job", 
-    "Owns/ Works at Small Independent Shop", 
-    "Good with Kids", 
-    "Divorced", 
-    "Laser Eyes (her to him)", 
-    "Tragic Sibling Event", 
-    "Reformed Scrooge", 
-    "Kissing in Snow", 
-    "Class Differences", 
-    "Christmas Sweater", 
-    "New in Town", 
-    "Recycled Advice(“a friend once said..”)", 
-    "Illness", 
-    "Proposal", 
-    "Rugged", 
-    "Dog", 
-    "Christmas Shopping", 
-    "“Moment” by the Christmas Tree", 
-    "POC Friend", 
-    "Disapproving Parents", 
-    "“Oh, It’s Snowing”", 
-    "Cat", 
-    "Kiss by the Fire", 
-    "Single Dad", 
-    "Kissing Under Mistletoe"
-]
+board_values = {
+    cliche: [
+        "Truck",
+        "Christmas Event",
+        "Misunderstanding",
+        "Brooks Brothers",
+        "Laser eyes(each other)",
+        "Single Mom",
+        "One parent is dead",
+        "Charity Santa",
+        "Interrupted Moment(almost kiss)",
+        "Decorating",
+        "Laser Eyes (him to her)",
+        "Blonde",
+        "Money Trouble",
+        "Car Crash",
+        "Both parents are dead",
+        "Christmas Baking",
+        "Blue Collar Job",
+        "Owns/ Works at Small Independent Shop",
+        "Good with Kids",
+        "Divorced",
+        "Laser Eyes (her to him)",
+        "Tragic Sibling Event",
+        "Reformed Scrooge",
+        "Kissing in Snow",
+        "Class Differences",
+        "Christmas Sweater",
+        "New in Town",
+        "Recycled Advice(“a friend once said..”)",
+        "Illness",
+        "Proposal",
+        "Rugged",
+        "Dog",
+        "Christmas Shopping",
+        "“Moment” by the Christmas Tree",
+        "POC Friend",
+        "Disapproving Parents",
+        "“Oh, It’s Snowing”",
+        "Cat",
+        "Kiss by the Fire",
+        "Single Dad",
+        "Kissing Under Mistletoe"
+    ],
+    christmas: [
+        ""
+    ]
+
+}
 
 /**
  * returns a 2d array representing a randomized arrangement of board tiles.
@@ -155,6 +161,6 @@ async function getPDF() {
 }
 
 
-board = randomizeOptions(5, 5, clicheBingoList);
+board = randomizeOptions(5, 5, board_values.cliche);
 populateTable(document.getElementById("gameboard"), board);
 getPDF()
