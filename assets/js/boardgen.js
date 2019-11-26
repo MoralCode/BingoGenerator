@@ -134,7 +134,24 @@ function toDataURL(url) {
     });
 }
 
+function formatBoardText(board) {
+    formattedText = []
 
+    const format = {
+        // lineHeight: 1,
+        alignment: 'center'
+    }
+
+    for (r = 0; r < board.length; r++) {
+        row = []
+        for (c = 0; c < board[0].length; c++) {
+            row[c] = Object.assign({}, format, { text: board[r][c]})
+        }
+        formattedText[r] = row
+    }
+
+    return formattedText
+}
 
 async function getPDFTemplate(board) {
 
