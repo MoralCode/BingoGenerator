@@ -173,10 +173,12 @@ async function getPDFTemplate(board) {
             },
             //end workaround
 
-        ],
-        images: {
 
-        }
+        ],
+        pageBreakBefore: function (currentNode, followingNodesOnPage, nodesOnNextPage, previousNodesOnPage) {
+            return "columns" in currentNode && currentNode.startPosition.pageNumber !== 1;
+        },
+        images: {}
     };
 
     // var doc = new jsPDF("portrait", "pt", "letter")
