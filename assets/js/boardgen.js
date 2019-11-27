@@ -162,11 +162,13 @@ async function getPDFTemplate(board) {
 
     var docDefinition = {
         pageSize: 'LETTER',
-        content: [
+        header: [
             {
                 image: 'logo',
-                margin: [0, 0, 0, 20]
+                margin: [40,20,0,0]
             },
+        ],
+        content: [
             //this is a workaround to center the table.
             //see https://github.com/bpampuch/pdfmake/issues/72
             {
@@ -185,7 +187,8 @@ async function getPDFTemplate(board) {
                         }
                     },
                     { width: '*', text: '' },
-                ]
+                ],
+                margin: [0,60,0,0]
             },
             //end workaround
 
