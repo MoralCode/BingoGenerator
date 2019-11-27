@@ -181,11 +181,7 @@ async function getPDFTemplate(board) {
                             widths: Array(board[0].length).fill('*'),
                             heights: Array(board.length).fill(availableWidth/board.length),
                             alignment: 'center',
-                            body: [
-                                ['First', 'Second', 'Third', 'The last one'],
-                                ['Value 1', 'Value 2', 'Value 3', 'Value 4'],
-                                [{ text: 'Bold value', bold: true, alignment: 'center' }, 'Val 2', 'Val 3', 'Val 4']
-                            ]
+                            body: formatBoardText(board)
                         }
                     },
                     { width: '*', text: '' },
