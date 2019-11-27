@@ -75,25 +75,6 @@ function randomizeOptions(rows, columns, values) {
     return board
 }
 
-
-function populateTable(table, board) {
-    //https://stackoverflow.com/a/3955238
-    while (table.firstChild) {
-        table.removeChild(table.firstChild);
-    }
-
-    for (r=0; r < board.length; r++) {
-        row = document.createElement("tr");
-
-        for (c = 0; c < board[0].length; c++) {
-            value = document.createElement("td");
-            value.innerText = board[r][c];
-            row.appendChild(value)
-        }
-        table.appendChild(row);
-    }
-}
-
 //Copoed from https://stackoverflow.com/a/2450976 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -215,7 +196,6 @@ async function getPDFTemplate(board) {
 document.getElementById("generate").onclick = () => {
 
     board = randomizeOptions(5, 5, board_values.cliche);
-    populateTable(document.getElementById("gameboard"), board);
     getPDFTemplate(board)
         .then((template) => pdfMake.createPdf(template).getDataUrl(
             (dataUrl) => {
