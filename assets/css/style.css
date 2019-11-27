@@ -81,5 +81,5 @@ table td {
 
 iframe {
     width: 50vw;
-    height: 100vw;
+    height: calc(50vw * 1.29);
 }
