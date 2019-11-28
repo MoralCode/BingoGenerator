@@ -1,13 +1,21 @@
 header {
     display: flex;
+    flex-direction: column;
 }
 
 header > nav {
     flex-grow: 1;
 }
 
+header > img {
+    flex-grow: 0;
+    margin: 0 auto;
+}
+
 nav ul {
     display: flex;
+    padding: 0;
+    margin: 1.2em 0;
 }
 
 nav li {
@@ -28,9 +36,9 @@ nav li a#current {
     cursor: default;
 }
 
-
 .sidebyside {
     display: flex;
+    flex-direction: column;
 }
 
 .sidebyside > * {
@@ -63,7 +71,6 @@ input[type=number] {
 div#instructions {
     max-width: 600px;
     flex: 0 1 auto;
-    
 }
 
 table {
@@ -79,7 +86,36 @@ table td {
 
 /* hide generation form elements and nav in print stylesheets */
 
+
 iframe {
-    width: 50vw;
-    height: calc(50vw * 1.29);
+    width: 90vw;
+    height: calc(90vw * 1.29);
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+/* on big devices */
+
+
+@media (min-width: 992px) {
+    .sidebyside {
+        flex-direction: row;
+    }
+    div#instructions {
+        order: 2;
+    }
+
+    iframe {
+        width: 50vw;
+        height: calc(50vw * 1.29);
+    }
+}
+
+@media (min-width: 576px) {
+    header {
+        flex-direction: row;
+    }
 }
