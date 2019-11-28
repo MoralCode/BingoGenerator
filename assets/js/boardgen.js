@@ -48,6 +48,12 @@ board_values = {
 
 }
 
+const gameTypeElement = document.getElementById("gametype")
+const boardCountElement = document.getElementById("boardcount")
+const boardXElement = document.getElementById("boarddimx")
+const boardYElement = document.getElementById("boarddimy")
+const generateButtonElement = document.getElementById("generate")
+
 /**
  * returns a 2d array representing a randomized arrangement of board tiles.
  * @param {*} rows the number of rows the board should have
@@ -201,7 +207,7 @@ function replaceInlinePDFWith(node) {
 }
 
 
-document.getElementById("generate").onclick = () => {
+generateButtonElement.onclick = () => {
     //add loader
     image = document.createElement('img')
     image.src = "assets/media/loader.gif"
