@@ -200,7 +200,14 @@ function replaceInlinePDFWith(node) {
     main.replaceChild(node, document.getElementById('pdfinline'))
 }
 
+
 document.getElementById("generate").onclick = () => {
+    //add loader
+    image = document.createElement('img')
+    image.src = "assets/media/loader.gif"
+    image.style.display = "block";
+    image.style.margin = "0 auto";
+    replaceInlinePDFWith(image)
 
     board = randomizeOptions(5, 5, board_values.cliche);
     getPDFTemplate(board)
