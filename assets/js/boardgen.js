@@ -194,6 +194,11 @@ async function getPDFTemplate(board) {
     return docDefinition
 }
 
+function replaceInlinePDFWith(node) {
+    const main = document.getElementsByTagName("main")[0]
+    node.id = "pdfinline"
+    main.replaceChild(node, document.getElementById('pdfinline'))
+}
 
 document.getElementById("generate").onclick = () => {
 
@@ -201,11 +206,9 @@ document.getElementById("generate").onclick = () => {
     getPDFTemplate(board)
         .then((template) => pdfMake.createPdf(template).getDataUrl(
             (dataUrl) => {
-                const main = document.getElementsByTagName("main")[0]
-                var iframe = document.createElement('iframe');                
-                iframe.id = "pdfinline"
-                iframe.src = dataUrl;
-                main.replaceChild(iframe, document.getElementById('pdfinline'))
+                var iframe = document.createElement('iframe');
+                iframe.src = dataUrl;                
+                replaceInlinePDFWith(iframe)
             })
         );
 }
