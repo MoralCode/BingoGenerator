@@ -215,7 +215,7 @@ generateButtonElement.onclick = () => {
     image.style.margin = "0 auto";
     replaceInlinePDFWith(image)
 
-    board = randomizeOptions(5, 5, board_values.cliche);
+    board = randomizeOptions(boardXElement.value, boardYElement.value, board_values.cliche);
     getPDFTemplate(board)
         .then((template) => pdfMake.createPdf(template).getDataUrl(
             (dataUrl) => {
