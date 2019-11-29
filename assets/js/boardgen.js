@@ -169,7 +169,7 @@ function formatBoardText(board) {
     return formattedText
 }
 
-async function getPDFTemplate(board) {
+async function getPDFTemplate(quantity, options) {
 
     var docDefinition = {
         pageSize: 'LETTER',
@@ -179,32 +179,7 @@ async function getPDFTemplate(board) {
                 margin: [40,20,0,0]
             },
         ],
-        content: [
-            //this is a workaround to center the table.
-            //see https://github.com/bpampuch/pdfmake/issues/72
-            {
-                columns: [
-                    { width: '*', text: '' },
-                    {
-                        width: 'auto',
-                        table: {
-                            // headers are automatically repeated if the table spans over multiple pages
-                            // you can declare how many rows should be treated as headers
-                            headerRows: 0,
-                            widths: Array(board[0].length).fill('*'),
-                            heights: Array(board.length).fill(availableWidth/board.length),
-                            alignment: 'center',
-                            body: formatBoardText(board)
-                        }
-                    },
-                    { width: '*', text: '' },
-                ],
-                margin: [0,60,0,0]
-            },
-            //end workaround
-
-
-        ],
+        content: [],
         pageBreakBefore: function (currentNode, followingNodesOnPage, nodesOnNextPage, previousNodesOnPage) {
             return "columns" in currentNode && currentNode.startPosition.pageNumber !== 1;
         },
@@ -212,6 +187,11 @@ async function getPDFTemplate(board) {
     };
 
     // var doc = new jsPDF("portrait", "pt", "letter")
+
+    for(i = 0; i < quantity; i++) {
+        newboard = randomizeOptions(boardXElement.value, boardYElement.value, options);
+        docDefinition.content.push(getTableDefenitionFromBoard(newboard));
+    }
 
     //wait for the image to be added first
     await toDataURL("assets/media/hallmarkbingo.png")
@@ -239,8 +219,7 @@ generateButtonElement.onclick = () => {
     image.style.margin = "0 auto";
     replaceInlinePDFWith(image)
 
-    board = randomizeOptions(boardXElement.value, boardYElement.value, board_values.cliche);
-    getPDFTemplate(board)
+    getPDFTemplate(boardCountElement.value, board_values.cliche)
         .then((template) => pdfMake.createPdf(template).getDataUrl(
             (dataUrl) => {
                 var iframe = document.createElement('iframe');
