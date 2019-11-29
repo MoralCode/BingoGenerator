@@ -121,6 +121,35 @@ function toDataURL(url) {
     });
 }
 
+function getTableDefenitionFromBoard(board) {
+    //there should be a better way to get the width in pdfmake than
+    //just hardcoding the page height and making up an arbitrary number so that it's close enough
+    //the 612 comes from the LETTER size in https://github.com/bpampuch/pdfmake/blob/79d9d51e0b5cf5ea4b0491811591ea5aaf15c95b/src/standardPageSizes.js, and the 120 is just a number made up to account for the margins and whatever so that the table appears square when it is used for the height
+    const availableWidth = 612.00 - 140;
+
+    //this contains a workaround to center the table.
+    //see https://github.com/bpampuch/pdfmake/issues/72
+    return {
+        columns: [
+            { width: '*', text: '' },
+            {
+                width: 'auto',
+                table: {
+                    // headers are automatically repeated if the table spans over multiple pages
+                    // you can declare how many rows should be treated as headers
+                    headerRows: 0,
+                    widths: Array(board[0].length).fill('*'),
+                    heights: Array(board.length).fill(availableWidth / board.length),
+                    alignment: 'center',
+                    body: formatBoardText(board)
+                }
+            },
+            { width: '*', text: '' },
+        ],
+        margin: [0, 60, 0, 0]
+    }
+}
+
 function formatBoardText(board) {
     formattedText = []
 
@@ -141,11 +170,6 @@ function formatBoardText(board) {
 }
 
 async function getPDFTemplate(board) {
-
-    //there should be a better way to get the width in pdfmake than
-    //just hardcoding the page height and making up an arbitrary number so that it's close enough
-    //the 612 comes from the LETTER size in https://github.com/bpampuch/pdfmake/blob/79d9d51e0b5cf5ea4b0491811591ea5aaf15c95b/src/standardPageSizes.js, and the 120 is just a number made up to account for the margins and whatever so that the table appears square when it is used for the height
-    const availableWidth = 612.00-140;
 
     var docDefinition = {
         pageSize: 'LETTER',
@@ -179,10 +203,6 @@ async function getPDFTemplate(board) {
             },
             //end workaround
 
-    //there should be a better way to get the width in pdfmake than
-    //just hardcoding the page height and making up an arbitrary number so that it's close enough
-    //the 612 comes from the LETTER size in https://github.com/bpampuch/pdfmake/blob/79d9d51e0b5cf5ea4b0491811591ea5aaf15c95b/src/standardPageSizes.js, and the 120 is just a number made up to account for the margins and whatever so that the table appears square when it is used for the height
-    const availableWidth = 612.00-140;
 
         ],
         pageBreakBefore: function (currentNode, followingNodesOnPage, nodesOnNextPage, previousNodesOnPage) {
