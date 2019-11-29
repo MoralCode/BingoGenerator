@@ -1,3 +1,18 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0 5px;
+}
+
+body > * {
+    flex: 0 0 auto;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -34,6 +49,10 @@ nav li a#current {
     font-weight: bold;
     pointer-events: none;
     cursor: default;
+}
+
+main {
+    flex: 1;
 }
 
 .sidebyside {
