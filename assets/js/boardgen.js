@@ -180,6 +180,13 @@ async function getPDFTemplate(quantity, options) {
             },
         ],
         content: [],
+        footer: {
+            text: [
+                'Channel Font used with permission of ',
+                { text: 'Måns Grebäck', link: 'https://www.mansgreback.com/'}
+            ],
+            alignment: 'center'
+        },
         pageBreakBefore: function (currentNode, followingNodesOnPage, nodesOnNextPage, previousNodesOnPage) {
             return "columns" in currentNode && previousNodesOnPage.length > 1;
         },
