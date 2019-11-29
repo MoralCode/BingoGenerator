@@ -181,7 +181,7 @@ async function getPDFTemplate(quantity, options) {
         ],
         content: [],
         pageBreakBefore: function (currentNode, followingNodesOnPage, nodesOnNextPage, previousNodesOnPage) {
-            return "columns" in currentNode && currentNode.startPosition.pageNumber !== 1;
+            return "columns" in currentNode && previousNodesOnPage.length > 1;
         },
         images: {}
     };
