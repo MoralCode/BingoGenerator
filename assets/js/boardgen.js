@@ -192,6 +192,18 @@ function replaceInlinePDFWith(node) {
 }
 
 
+for (const gamemode in board_values) {
+    console.group(gamemode);
+    option = document.createElement("option")
+    option.value = gamemode;
+    option.innerText = board_values[gamemode].name || gamemode;
+    if (board_values[gamemode].default) {
+        option.selected = true;
+    }
+    gameTypeElement.appendChild(option)
+}
+
+
 generateButtonElement.onclick = () => {
     //add loader
     image = document.createElement('img')
@@ -200,7 +212,9 @@ generateButtonElement.onclick = () => {
     image.style.margin = "0 auto";
     replaceInlinePDFWith(image)
 
-    getPDFTemplate(boardCountElement.value, board_values.cliche)
+    tiles = board_values[gameTypeElement.value].tiles
+
+    getPDFTemplate(boardCountElement.value, tiles)
         .then((template) => pdfMake.createPdf(template).getDataUrl(
             (dataUrl) => {
                 var iframe = document.createElement('iframe');
