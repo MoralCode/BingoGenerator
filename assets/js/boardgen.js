@@ -1,49 +1,49 @@
 board_values = {
     cliche: [
-        "Truck",
-        "Christmas Event",
-        "Misunderstanding",
-        "Brooks Brothers",
-        "Laser eyes (each other)",
-        "Single Mom",
-        "One parent is dead",
-        "Charity Santa",
-        "Interrupted Moment (almost kiss)",
-        "Decorating",
-        "Laser Eyes (him to her)",
-        "Blonde",
-        "Money Trouble",
-        "Car Crash",
-        "Both parents are dead",
-        "Christmas Baking",
-        "Blue Collar Job",
-        "Owns/Works at Small Independent Shop",
-        "Good with Kids",
-        "Divorced",
-        "Laser Eyes (her to him)",
-        "Tragic Sibling Event",
-        "Reformed Scrooge",
-        "Kissing in Snow",
-        "Class Differences",
-        "Christmas Sweater",
-        "New in Town",
-        "Recycled Advice (“a friend once said..”)",
-        "Illness",
-        "Proposal",
-        "Rugged",
-        "Dog",
-        "Christmas Shopping",
-        "“Moment” by the Christmas Tree",
-        "POC Friend",
-        "Disapproving Parents",
-        "“Oh, It’s Snowing”",
-        "Cat",
-        "Kiss by the Fire",
-        "Single Dad",
-        "Kissing Under Mistletoe"
+        {title: "Truck"},
+        {title: "Christmas Event"},
+        {title: "Misunderstanding"},
+        {title: "Brooks Brothers"},
+        {title: "Laser eyes (each other)"},
+        {title: "Single Mom"},
+        {title: "One parent is dead"},
+        {title: "Charity Santa"},
+        {title: "Interrupted Moment (almost kiss)"},
+        {title: "Decorating"},
+        {title: "Laser Eyes (him to her)"},
+        {title: "Blonde"},
+        {title: "Money Trouble"},
+        {title: "Car Crash"},
+        {title: "Both parents are dead"},
+        {title: "Christmas Baking"},
+        {title: "Blue Collar Job"},
+        {title: "Owns/Works at Small Independent Shop"},
+        {title: "Good with Kids"},
+        {title: "Divorced"},
+        {title: "Laser Eyes (her to him)"},
+        {title: "Tragic Sibling Event"},
+        {title: "Reformed Scrooge"},
+        {title: "Kissing in Snow"},
+        {title: "Class Differences"},
+        {title: "Christmas Sweater"},
+        {title: "New in Town"},
+        {title: "Recycled Advice (“a friend once said..”)"},
+        {title: "Illness"},
+        {title: "Proposal"},
+        {title: "Rugged"},
+        {title: "Dog"},
+        {title: "Christmas Shopping"},
+        {title: "“Moment” by the Christmas Tree"},
+        {title: "POC Friend"},
+        {title: "Disapproving Parents"},
+        {title: "“Oh, It’s Snowing”"},
+        {title: "Cat"},
+        {title: "Kiss by the Fire"},
+        {title: "Single Dad"},
+        {title: "Kissing Under Mistletoe"}
     ],
     christmas: [
-        ""
+        {title: ""}
     ]
 
 }
@@ -156,7 +156,19 @@ function formatBoardText(board) {
     for (r = 0; r < board.length; r++) {
         row = []
         for (c = 0; c < board[0].length; c++) {
-            row[c] = { text: board[r][c], style: 'boardCellMainText'}
+            row[c] = {
+                stack: [
+                    { text: board[r][c].title, style: 'boardCellMainText' }
+                ],
+                style: 'boardCell'
+            }
+
+            // add the descriptions if present
+            if (board[r][c].hasOwnProperty("detail")){
+                row[c].stack.push(
+                    { text: board[r][c].detail, style: 'boardCelldetailText' }
+                )
+            }
         }
         formattedText[r] = row
     }
@@ -195,6 +207,11 @@ async function getPDFTemplate(quantity, options) {
             boardCellMainText: {
                 // fontSize: 20,
                 bold: true,
+                alignment: 'center'
+            },
+            boardCellDetailText: {
+                // fontSize: 16,
+                italics: true,
                 alignment: 'center'
             }
         }
