@@ -166,7 +166,7 @@ function formatBoardText(board) {
             // add the descriptions if present
             if (board[r][c].hasOwnProperty("detail")){
                 row[c].stack.push(
-                    { text: board[r][c].detail, style: 'boardCelldetailText' }
+                    { text: board[r][c].detail, style: 'boardCellDetailText' }
                 )
             }
         }
@@ -205,12 +205,12 @@ async function getPDFTemplate(quantity, options) {
         images: {},
         styles: {
             boardCellMainText: {
-                // fontSize: 20,
+                // fontSize: 20,//pt
                 bold: true,
                 alignment: 'center'
             },
             boardCellDetailText: {
-                // fontSize: 16,
+                fontSize: 10,//pt
                 italics: true,
                 alignment: 'center'
             }
