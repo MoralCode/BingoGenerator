@@ -153,15 +153,10 @@ function getTableDefenitionFromBoard(board) {
 function formatBoardText(board) {
     formattedText = []
 
-    const format = {
-        // lineHeight: 1,
-        alignment: 'center'
-    }
-
     for (r = 0; r < board.length; r++) {
         row = []
         for (c = 0; c < board[0].length; c++) {
-            row[c] = Object.assign({}, format, { text: board[r][c]})
+            row[c] = { text: board[r][c], style: 'boardCellMainText'}
         }
         formattedText[r] = row
     }
@@ -195,7 +190,14 @@ async function getPDFTemplate(quantity, options) {
         pageBreakBefore: function (currentNode, followingNodesOnPage, nodesOnNextPage, previousNodesOnPage) {
             return "columns" in currentNode && previousNodesOnPage.length > 1;
         },
-        images: {}
+        images: {},
+        styles: {
+            boardCellMainText: {
+                // fontSize: 20,
+                bold: true,
+                alignment: 'center'
+            }
+        }
     };
 
     // var doc = new jsPDF("portrait", "pt", "letter")
