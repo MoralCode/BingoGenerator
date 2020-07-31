@@ -205,6 +205,10 @@ for (const gamemode in board_values) {
 
 
 generateButtonElement.onclick = () => {
+
+    _paq.push(['trackEvent', 'Boards', 'Generate', board_values[gameTypeElement.value].name, boardCountElement.value]);
+
+
     //add loader
     image = document.createElement('img')
     image.src = "assets/media/loader.gif"
