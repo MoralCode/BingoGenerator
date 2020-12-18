@@ -43,6 +43,11 @@ function insertFreeSpaces(board, freeTileCount) {
     const boardHeight = board.length;
     const totalTiles = boardWidth * boardHeight;
 
+    if (freeTileCount == 0) {
+        //user opted for no free tiles, return the board as is
+        return board
+    }
+
     if (freeTileCount > totalTiles) {
         console.error("Too many free tiles selected for this board size. Skipping free tile generation")
         return board
