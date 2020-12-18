@@ -31,6 +31,39 @@ function randomizeOptions(rows, columns, values) {
     return board
 }
 
+/**
+ * returns a 2d array representing a randomized arrangement of board tiles with free spaces.
+ * @param {*} board the board to apply the free tiles to
+ * @param {*} freeTileCount the number of free tiles to add to the board
+ */
+function insertFreeSpaces(board, freeTileCount) {
+
+    const boardWidth = board[0].length;
+    const boardHeight = board.length;
+    const totalTiles = boardWidth * boardHeight;
+
+    if (freeTileCount > totalTiles) {
+        console.error("Too many free tiles selected for this board size. Skipping free tile generation")
+        return board
+    }
+
+    let freeSpacesAdded = 0;
+
+    while (freeSpacesAdded < freeTileCount) {
+        const randPosition = Math.floor(Math.random() * (totalTiles + 1));
+
+        const randTileY = Math.floor(randPosition / boardWidth);
+        const randTileX = randPosition % boardWidth;
+
+        //if the tile hasnt been made a free space yet, mark it
+        if (board[randTileY][randTileX].title != "") {
+            board[randTileY][randTileX] = {title: ""}
+            freeSpacesAdded++
+        }
+    }
+    return board
+}
+
 //Copoed from https://stackoverflow.com/a/2450976 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
