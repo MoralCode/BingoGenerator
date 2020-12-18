@@ -2,6 +2,7 @@ const gameTypeElement = document.getElementById("gametype")
 const boardCountElement = document.getElementById("boardcount")
 const boardXElement = document.getElementById("boarddimx")
 const boardYElement = document.getElementById("boarddimy")
+const boardFreeTilesElement = document.getElementById("freetiles")
 const generateButtonElement = document.getElementById("generate")
 
 /**
