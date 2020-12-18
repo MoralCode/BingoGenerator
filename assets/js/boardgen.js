@@ -210,6 +210,7 @@ async function getPDFTemplate(quantity, options) {
 
     for(i = 0; i < quantity; i++) {
         newboard = randomizeOptions(boardXElement.value, boardYElement.value, options);
+        newboard = insertFreeSpaces(newboard, boardFreeTilesElement.value);
         docDefinition.content.push(getTableDefenitionFromBoard(newboard));
     }
 
