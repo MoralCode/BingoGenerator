@@ -62,13 +62,7 @@ main {
 table#boardTable {
     width: 90%;
     margin: 0 auto;
-    height: 90%;
-    /* display: grid;
-    grid-auto-rows: 1fr;
-
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-    /* grid-row-gap: 50px;
-    grid-column-gap: 50px; */
+    height: 70%; /* this is stupid and requires manually compansating for the height of the titles and text above it in order for it to ot run off the page */
 }
 
 table#boardTable > tr > td  {
@@ -78,7 +72,6 @@ table#boardTable > tr > td  {
 }
 
 table#boardTable > tr > td > *  {
-    /* flex-grow: 1; */
     margin: 0 auto;
 }
 
