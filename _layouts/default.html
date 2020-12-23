@@ -37,6 +37,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.60/vfs_fonts.js"
             integrity="sha256-UsYCHdwExTu9cZB+QgcOkNzUCTweXr5cNfRlAAtIlPY=" crossorigin="anonymous"></script>
         <script src="assets/data/data.js"></script>
-        <script src="assets/js/boardgen.js"></script>
+        <script src="assets/js/constants.js"></script>
+        {% if page.js %}
+            {% for js in page.js %}
+            <script src="assets/js/{{ js }}"></script>
+            {% endfor %}
+        {% endif %}
     </body>
 </html>

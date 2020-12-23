@@ -59,6 +59,33 @@ main {
     margin: 0 auto;
 }
 
+table#boardTable {
+    width: 90%;
+    margin: 0 auto;
+    height: 90%;
+    /* display: grid;
+    grid-auto-rows: 1fr;
+
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    /* grid-row-gap: 50px;
+    grid-column-gap: 50px; */
+}
+
+table#boardTable > tr > td  {
+    text-align: center;
+    background-color: white;
+
+}
+
+table#boardTable > tr > td > *  {
+    /* flex-grow: 1; */
+    margin: 0 auto;
+}
+
+td .detail {
+    max-width: 200px;
+}
+
 .sidebyside {
     display: flex;
     flex-direction: column;
@@ -144,4 +171,9 @@ footer {
     header {
         flex-direction: row;
     }
+}
+
+.detail {
+    color: gray;
+    font-size: smaller;
 }

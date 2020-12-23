@@ -4,6 +4,7 @@ const boardXElement = document.getElementById("boarddimx")
 const boardYElement = document.getElementById("boarddimy")
 const boardFreeTilesElement = document.getElementById("freetiles")
 const generateButtonElement = document.getElementById("generate")
+const playBoardElement = document.getElementById("play")
 
 /**
  * returns a 2d array representing a randomized arrangement of board tiles.
@@ -231,6 +232,25 @@ function replaceInlinePDFWith(node) {
     main.replaceChild(node, document.getElementById('pdfinline'))
 }
 
+function createBoardForPlay(options) {
+    newboard = randomizeOptions(boardXElement.value, boardYElement.value, options);
+    newboard = insertFreeSpaces(newboard, boardFreeTilesElement.value);
+    // Store
+    const boardJSON = {
+        rows: []
+    }
+    for (row in newboard){
+        boardJSON.rows.push({
+            cols: newboard[row]
+        })
+    }
+
+
+
+    sessionStorage.setItem(boardSaveKey, JSON.stringify(boardJSON));
+    // console.log(sessionStorage.getItem(boardSaveKey))
+}
+
 
 for (const gamemode in board_values) {
     console.group(gamemode);
@@ -266,4 +286,16 @@ generateButtonElement.onclick = () => {
                 replaceInlinePDFWith(iframe)
             })
         );
+}
+
+
+playBoardElement.onclick = () => {
+    _paq.push(['trackEvent', 'Boards', 'Play', board_values[gameTypeElement.value].name, boardCountElement.value]);
+
+    tiles = board_values[gameTypeElement.value].tiles
+
+    createBoardForPlay(tiles)
+
+    // window.location.href = "/";
+
 }
