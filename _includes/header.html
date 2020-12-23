@@ -3,7 +3,7 @@
     <ul>
         {% for item in site.data.pages %}
         <li>
-            <a id="{% if item.url == page.url %}current{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+            <a id="{% if item.url == page.url %}current{% endif %}" href="{{ site.basename }}{{ item.url }}">{{ item.title }}</a>
         </li>
         {% endfor %}
     </ul>
