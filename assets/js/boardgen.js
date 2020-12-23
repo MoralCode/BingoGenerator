@@ -297,6 +297,10 @@ playBoardElement.onclick = () => {
 
     storeBoardForPlay(createBoard(tiles))
 
-    // window.location.href = "/";
+    let playURL = "/play"
+    if (window.location.href.endsWith("/")){
+        playURL = "play"
+    }
+    window.location.href = window.location.href + playURL;
 
 }
