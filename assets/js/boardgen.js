@@ -232,25 +232,26 @@ function replaceInlinePDFWith(node) {
     main.replaceChild(node, document.getElementById('pdfinline'))
 }
 
-function createBoardForPlay(options) {
+function createBoard(options) {
     newboard = randomizeOptions(boardXElement.value, boardYElement.value, options);
     newboard = insertFreeSpaces(newboard, boardFreeTilesElement.value);
+    return newboard
+}
+
+function storeBoardForPlay(board){
     // Store
     const boardJSON = {
         rows: []
     }
-    for (row in newboard){
+    for (row in board) {
         boardJSON.rows.push({
-            cols: newboard[row]
+            cols: board[row]
         })
     }
-
-
 
     sessionStorage.setItem(boardSaveKey, JSON.stringify(boardJSON));
     // console.log(sessionStorage.getItem(boardSaveKey))
 }
-
 
 for (const gamemode in board_values) {
     console.group(gamemode);
@@ -294,7 +295,7 @@ playBoardElement.onclick = () => {
 
     tiles = board_values[gameTypeElement.value].tiles
 
-    createBoardForPlay(tiles)
+    storeBoardForPlay(createBoard(tiles))
 
     // window.location.href = "/";
 
