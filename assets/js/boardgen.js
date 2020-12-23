@@ -232,8 +232,8 @@ function replaceInlinePDFWith(node) {
     main.replaceChild(node, document.getElementById('pdfinline'))
 }
 
-function createBoard(options) {
-    newboard = randomizeOptions(boardXElement.value, boardYElement.value, options);
+function createBoard(width, height, options) {
+    newboard = randomizeOptions(width, height, options);
     newboard = insertFreeSpaces(newboard, boardFreeTilesElement.value);
     return newboard
 }
@@ -295,7 +295,7 @@ playBoardElement.onclick = () => {
 
     tiles = board_values[gameTypeElement.value].tiles
 
-    storeBoardForPlay(createBoard(tiles))
+    storeBoardForPlay(createBoard(boardXElement.value, boardYElement.value, tiles))
 
     let playURL = "/play"
     if (window.location.href.endsWith("/")){
