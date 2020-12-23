@@ -24,8 +24,8 @@ A Website that generated bingo games on a variety of topics
   - random free spaces have been implemented, but not a way to make the free spaces consistent between generated boards
 - [ ] numbers-based bingo mode?
 - [ ] upload a custom image to the bingo sheet (advanced)
-- [ ] some way to digitally fill out the bingo cards to avoid printing?
- - add other gamemodes such as:
+- [X] some way to digitally fill out the bingo cards to avoid printing?
+- [ ] add other gamemodes such as:
     - [ ] fallacies
 		https://www.youtube.com/watch?v=9LR6EA91zLo
 		https://www.youtube.com/watch?v=I52hsUyQeis
