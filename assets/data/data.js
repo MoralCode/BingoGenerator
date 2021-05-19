@@ -1,4 +1,8 @@
 board_values = {
+    metadata: {
+        version: 1,
+        based_on: null,
+    },
     cliche: {
         name: "Hallmark Bingo",
         default: true,
