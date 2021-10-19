@@ -166,7 +166,7 @@ function formatBoardText(board) {
     return formattedText
 }
 
-async function getPDFTemplate(quantity, tiles) {
+async function getPDFTemplate(quantity, tiles, custom_img) {
 
     var docDefinition = {
         pageSize: 'LETTER',
@@ -222,7 +222,7 @@ async function getPDFTemplate(quantity, tiles) {
     }
 
     //wait for the image to be added first
-    await toDataURL("assets/media/hallmarkbingo.png")
+    await toDataURL(custom_img)
     .then((uri) => {
         docDefinition.images.logo = uri
         
@@ -287,8 +287,9 @@ generateButtonElement.onclick = () => {
     replaceInlinePDFWith(image)
 
     tiles = board_values[gameTypeElement.value].tiles
+    custom_img = board_values[gameTypeElement.value].image
 
-    getPDFTemplate(boardCountElement.value, tiles)
+    getPDFTemplate(boardCountElement.value, tiles, custom_img)
         .then((template) => pdfMake.createPdf(template).getDataUrl(
             (dataUrl) => {
                 var iframe = document.createElement('iframe');
