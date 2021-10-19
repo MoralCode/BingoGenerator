@@ -6,6 +6,7 @@ board_values = {
     cliche: {
         name: "Hallmark Bingo",
         default: true,
+        image: "assets/media/hallmarkbingo.png",
         tiles: [
             { title: "Blonde" },
             { title: "Blue Collar Job" },
