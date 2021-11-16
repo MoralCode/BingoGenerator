@@ -253,15 +253,18 @@ function storeBoardForPlay(board){
     // console.log(sessionStorage.getItem(boardSaveKey))
 }
 
-for (const gamemode in board_values) {
-    console.group(gamemode);
-    option = document.createElement("option")
-    option.value = gamemode;
-    option.innerText = board_values[gamemode].name || gamemode;
-    if (board_values[gamemode].default) {
-        option.selected = true;
+for (const [key, gamemode] of Object.entries(board_values)) {
+    console.log(key);
+    console.log(gamemode.hasOwnProperty('name'));
+    if (gamemode.hasOwnProperty('name')) {
+        option = document.createElement("option")
+        option.value = key;
+        option.innerText = gamemode.name;
+        if (gamemode.default) {
+            option.selected = true;
+        }
+        gameTypeElement.appendChild(option)
     }
-    gameTypeElement.appendChild(option)
 }
 
 
