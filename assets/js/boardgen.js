@@ -210,8 +210,7 @@ async function getPDFTemplate(quantity, options) {
     // var doc = new jsPDF("portrait", "pt", "letter")
 
     for(i = 0; i < quantity; i++) {
-        newboard = randomizeOptions(boardXElement.value, boardYElement.value, options);
-        newboard = insertFreeSpaces(newboard, boardFreeTilesElement.value);
+        newboard = createBoard(boardXElement.value, boardYElement.value, options, boardFreeTilesElement.value);
         docDefinition.content.push(getTableDefenitionFromBoard(newboard));
     }
 
