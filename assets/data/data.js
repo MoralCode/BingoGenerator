@@ -68,7 +68,7 @@ board_values = {
             { title: "Boy runs fingers through his hair", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
             { title: "Green grass with snow falling", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
             { title: "Sweater with elbow patches", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
-            { title: "Couples first kiss" },, source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/"//?
+            { title: "Couples first kiss", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/"},//?
             { title: "Someone gets fired", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
             { title: "Family sits by the Xmas Tree", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
             { title: "\"Spirit of christmas\"", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
