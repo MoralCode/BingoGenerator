@@ -5,6 +5,7 @@ const boardYElement = document.getElementById("boarddimy")
 const boardFreeTilesElement = document.getElementById("freetiles")
 const generateButtonElement = document.getElementById("generate")
 const playBoardElement = document.getElementById("play")
+const warningTextElement = document.getElementById("warningText")
 
 /**
  * returns a 2d array representing a randomized arrangement of board tiles.

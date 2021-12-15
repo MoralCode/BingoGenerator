@@ -109,6 +109,10 @@ div.option > button {
  margin: .25em;
 }
 
+div.option > p#warningText {
+ max-width: 100%;
+ visibility: hidden;
+}
 
 input[type=number] {
     width: 40px;
