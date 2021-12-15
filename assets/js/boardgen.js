@@ -277,6 +277,34 @@ for (const [key, gamemode] of Object.entries(board_values)) {
 }
 
 
+
+const checkBoardSize = () => {
+
+    const tilesNeeded = (boardXElement.value * boardYElement.value) - boardFreeTilesElement.value;
+
+    const available_tiles = board_values[gameTypeElement.value].tiles.length;
+    console.log(tilesNeeded)
+    if (tilesNeeded > available_tiles) {
+        // disable the buttons and show a message
+        generateButtonElement.hidden = true;
+        playBoardElement.hidden = true;
+        warningTextElement.innerText = "Your current board settings require more tiles than this game mode has.\n Try checking your board size and free space settings."
+        warningTextElement.hidden = false;
+
+    } else {
+        generateButtonElement.hidden = false;
+        playBoardElement.hidden = false;
+        warningTextElement.hidden = true;
+
+    }
+
+}
+
+boardXElement.onchange = checkBoardSize;
+boardYElement.onchange = checkBoardSize;
+gameTypeElement.onchange = checkBoardSize
+
+
 generateButtonElement.onclick = () => {
 
     _paq.push(['trackEvent', 'Boards', 'Generate', board_values[gameTypeElement.value].name, boardCountElement.value]);
