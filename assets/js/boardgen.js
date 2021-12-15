@@ -170,12 +170,7 @@ async function getPDFTemplate(quantity, tiles, custom_img) {
 
     var docDefinition = {
         pageSize: 'LETTER',
-        header: [
-            {
-                image: 'logo',
-                margin: [40,20,0,0]
-            },
-        ],
+        header: [],
         content: [],
         footer: function (currentPage, pageCount) {
             return [
@@ -222,13 +217,20 @@ async function getPDFTemplate(quantity, tiles, custom_img) {
     }
 
     //wait for the image to be added first
-    await toDataURL(custom_img)
-    .then((uri) => {
-        docDefinition.images.logo = uri
-        
-    })
-    .catch((error) => {console.error(error)});
+    if (custom_img) {
+        await toDataURL(custom_img)
+            .then((uri) => {
+                docDefinition.images.logo = uri
 
+                docDefinition.header.push({
+                    image: 'logo',
+                    margin: [40, 20, 0, 0]
+                })
+
+            })
+            .catch((error) => { console.error(error) });
+    }
+    
     return docDefinition
 }
 
