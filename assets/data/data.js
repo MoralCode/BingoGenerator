@@ -112,6 +112,9 @@ board_values = {
             { title: "Christmas tree in the background" },
             { title: "Visible Union Jack", detail: "The british flag" },
             { title: "Queen is wearing a broach" },
+            { title: "\"The Commonwealth\"", source: "https://www.mumsnet.com/Talk/_chat/3871897-Queens-Speech-Bingo" },
+            { title: "\"My government\"", source: "https://www.mumsnet.com/Talk/_chat/3871897-Queens-Speech-Bingo" },
+            { title: "My/our duty", source: "https://www.mumsnet.com/Talk/_chat/3871897-Queens-Speech-Bingo" }
         ],
     },
     horror: {
