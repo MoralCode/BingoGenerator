@@ -96,6 +96,24 @@ board_values = {
             { title: "\"just like mom\"", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" }
         ]
     },
+    queen: {
+        name: "The Queen's Speech Bingo",
+        tiles: [
+            { title: "My Subjects / My people" },
+            { title: "Queen says something in Latin" },
+            { title: "\"thankful\"" },
+            { title: "\"grateful\"" },
+            { title: "\"honored\"" },
+            { title: "Castle" },
+            { title: "Balmoral" },
+            { title: "Duke" },
+            { title: "Corgi is visible" },
+            { title: "Fireplace is visible" },
+            { title: "Christmas tree in the background" },
+            { title: "Visible Union Jack", detail: "The british flag" },
+            { title: "Queen is wearing a broach" },
+        ],
+    },
     horror: {
         name: "Horror",
         sources: ["https://www.dreadcentral.com/top-10-lists/7170/51-worst-horror-movie-cliches/"], //all the comments are basiclaly just the extra text from this article that wouldnt fit too
