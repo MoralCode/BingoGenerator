@@ -75,7 +75,7 @@ board_values = {
             { title: "party planner character", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
             { title: "Gingerbread House", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
             { title: "A girl wears a red dress", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
-            { title: "Sharing of a sentamantal ornament", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
+            { title: "Sharing of a sentamental ornament", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
             { title: "Someone tosses flour in the kitchen", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
             { title: "Someone who hates cristmas", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
             { title: "Singing Christmas Carols", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" },
