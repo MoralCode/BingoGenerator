@@ -105,6 +105,9 @@ div.option > * {
     flex: 0 0 auto;
 }
 
+div.option > button {
+ margin: .25em;
+}
 
 
 input[type=number] {
