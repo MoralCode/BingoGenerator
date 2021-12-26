@@ -96,6 +96,32 @@ board_values = {
             { title: "\"just like mom\"", source: "https://www.peanutblossom.com/blog/hallmark-christmas-movie-bingo/" }
         ]
     },
+    action: {
+        name: "Action Movie Bingo",
+        tiles: [
+            {"title": "Sleeps with a girl" },
+            {"title": "Reference to another action movie(or previous movie in the series)" },
+            {"title": "Explosion" },
+            {"title": "Pre-dangerous-mission kiss" },
+            {"title": "Destroyed a vehicle owned by the agency" },
+            {"title": "Post-kill oneliner" },
+            {"title": "Barely beats a timer" },
+            {"title": "Bad guy reveals plot before killing main character" },
+            {"title": "Drowning" },
+            {"title": "waste as many bullets in as little time as possible" },
+            {"title": "taken out by something hanging in a tunnel or overhanging the train / passing overhead" },
+            {"title": "chief bad guy has a pet" },
+            {"title": "main character lies to someone they care about" },
+            {"title": "last minute \"work trip\"" },
+            {"title": "supposedly works some mundane day job" },
+            {"title": "dead mans switch" },
+            {"title": "dangling precipitously off some kind of ledge(ideally in a vehicle)" },
+            {"title": "bad guy in a limo" },
+            {"title": "run or fight on rooftop" },
+            {"title": "running excessively fast for a very long time and barely breathing heavy" },
+            {"title": "use a non - weapon as a weapon / taken out with an unconventional weapon" }
+        ]
+    },
     queen: {
         name: "The Queen's Speech Bingo",
         tiles: [
