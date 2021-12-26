@@ -104,7 +104,7 @@ board_values = {
             { title: "Explosion" },
             { title: "Pre-dangerous-mission kiss" },
             { title: "Destroyed a vehicle owned by an agency" },
-            { title: "Post-kill oneliner" },
+            { title: "One-liner" },
             { title: "Barely beats a timer" },
             { title: "Bad guy reveals plot before an attempting to kill the main character" },
             { title: "Drowning" },
@@ -115,12 +115,14 @@ board_values = {
             { title: "Last minute \"work trip\"" },
             { title: "Supposedly works some mundane day job to cover for what they really do" },
             { title: "Dead mans switch" },
-            { title: "Dangling precipitously off some kind of ledge (ideally in a vehicle)" },
+            { title: "Dangling precipitously from a ledge" },
             { title: "Bad guy has a limo" },
             { title: "Run or fight on rooftop(s)" },
-            { title: "running excessively fast for a very long time and barely breathing heavy" },
+            // { title: "Intense prolonged exertion and barely out of breath" },
             { title: "Use of a non-weapon to hurt someone" },
-            { title: "Codenames that sound made-up"}
+            { title: "Codenames that sound made-up" },
+            { title: "Pipes emitting steam" },
+            { title: "Jammed gun or out of ammo" }
         ]
     },
     queen: {
