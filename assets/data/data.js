@@ -203,6 +203,24 @@ board_values = {
             { title:"Vehicle trouble" }, //The engine to my car won’t start when I most need it to.Like when I’m about to get killed for example.Do car engines have minds of their own and just like to fuck with their owners ? They’re probably laughing the whole time as the hapless victim is frantically turning the key and only getting a chug chug chug.Seriously, though, instead of trimming the gore or nudity in a movie, they should be forced to trim the dumb parts like cars not starting.
             { title:"Electricity", detail: "Blue lightning, shaking" } //Marvel at it and all of its BLUENESS! Noticed this one just the other day.Many a time has a baddie(or group of baddies) been sent back to hell via a nice flesh - searing electrical shock.And although electrocution is a gruesome way to check out, it doesn’t make for a very visibly gory death.So what did the movie makers come up with? Make it BLUE! But why stop there ? Along with making it blue, let’s make it course up and down the body for maybe to seconds! And of course there must be a funny dance performed by the one being fried.It’s really quite silly since in reality being electrocuted does not last a full minute, and the current is definitely not visible to anybody who happens to be viewing it as it occurs.Also, if you watch closely, sometimes the person being zapped is either grounded or not in position to complete a circuit.Thus, they would have been fine anyways.But hey, it sure is fun watching ’em do that funny dance!
         ]
+    },
+    ritvegan: {
+        name: "RIT Vegan Bingo",
+        default: false,
+        image: "assets/media/hallmarkbingo.png",
+        tiles: [
+            { title: "Artesanos Vegan Foccacia bread" },
+            { title: "", detail: "" },
+            { title: "", detail: "" },
+            { title: "", detail: "" },
+            { title: "", detail: "" },
+            { title: "", detail: "" },
+            { title: "", detail: "" },
+            { title: "", detail: "" },
+            { title: "", detail: "" },
+            { title: "", detail: "" },
+            { title: "", detail: ""}
+        ]
     }
 
 }
