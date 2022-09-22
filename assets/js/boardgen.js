@@ -225,7 +225,8 @@ async function getPDFTemplate(quantity, tiles, custom_img) {
 
                 docDefinition.header.push({
                     image: 'logo',
-                    margin: [40, 20, 0, 0]
+                    margin: [40, 20, 0, 0],
+                    fit: [200, 70]
                 })
 
             })

@@ -207,7 +207,7 @@ board_values = {
     ritvegan: {
         name: "RIT Vegan Dining Bingo",
         default: false,
-        image: "assets/media/veganbingoscaled.png",
+        image: "assets/media/veganbingo.png",
         tiles: [
             { title: "Vegan Foccacia bread", detail: "from Artesano's" },
             { title: "Non-Dairy Ice Cream", detail: "from Ben and Jerry's with a sugar cone or cup." },
