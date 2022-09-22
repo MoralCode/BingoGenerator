@@ -203,6 +203,38 @@ board_values = {
             { title:"Vehicle trouble" }, //The engine to my car won’t start when I most need it to.Like when I’m about to get killed for example.Do car engines have minds of their own and just like to fuck with their owners ? They’re probably laughing the whole time as the hapless victim is frantically turning the key and only getting a chug chug chug.Seriously, though, instead of trimming the gore or nudity in a movie, they should be forced to trim the dumb parts like cars not starting.
             { title:"Electricity", detail: "Blue lightning, shaking" } //Marvel at it and all of its BLUENESS! Noticed this one just the other day.Many a time has a baddie(or group of baddies) been sent back to hell via a nice flesh - searing electrical shock.And although electrocution is a gruesome way to check out, it doesn’t make for a very visibly gory death.So what did the movie makers come up with? Make it BLUE! But why stop there ? Along with making it blue, let’s make it course up and down the body for maybe to seconds! And of course there must be a funny dance performed by the one being fried.It’s really quite silly since in reality being electrocuted does not last a full minute, and the current is definitely not visible to anybody who happens to be viewing it as it occurs.Also, if you watch closely, sometimes the person being zapped is either grounded or not in position to complete a circuit.Thus, they would have been fine anyways.But hey, it sure is fun watching ’em do that funny dance!
         ]
+    },
+    ritvegan: {
+        name: "RIT Vegan Dining Bingo",
+        default: false,
+        image: "assets/media/hallmarkbingo.png",
+        tiles: [
+            { title: "Vegan Foccacia bread", detail: "from Artesano's" },
+            { title: "Non-Dairy Ice Cream", detail: "from Ben and Jerry's with a sugar cone or cup." },
+            { title: "Tempeh BLT", detail: "from Midnight Oil" },
+            { title: "Something from Gracies", detail: "Please tell vegan club if you cannot complete this" },
+            { title: "Something that is both vegan and gluten free", detail: "Let Vegan Club know if this is hard to find." },
+            { title: "Vegan Breakfast Sandwich", detail: "from Brick City. You may have to request and wait longer for this" },
+            { title: "Vegan Breakfast Burrito", detail: "from Artesanos, may also be available other places" },
+            { title: "A Vegan Smoothie", detail: "from Beanz or elsewhere" },
+            { title: "Eat at the Brick City Vegan Bar", detail: "available during lunch at the station that does breakfast pancakes" },
+            { title: "Share a Veggie/hummus tray with a friend" },
+            { title: "Burrito with ROasted Veggies", detail: "from Salsaritas" },
+            { title: "Ask Nathans Soup and Salad for a menu and/or if they have anything vegan", detail: "Vegan club would like to know" },
+            { title: "Ask a Visiting Chef for a menu and/or if they have anything vegan", detail: "Vegan club would like to know" },
+            { title: "Ask a food truck for a menu and/or if they have anything vegan", detail: "Vegan club would like to know" },
+            { title: "Get a sub with Vegeterian Chicken", detail: "from Ritz" },
+            { title: "Buy the first vegan thing you see at the Corner store" },
+            { title: "Try a beyond burger", detail: "available at Wegmans (frozen) and maybe Crossroads" },
+            { title: "Get a pasta bake at Ritz" },
+            { title: "Visit the wegmans Vegan and gluten free aisle and try something new", detail: "aisle 1B at the Hylan Dr. Wegmans" },
+            { title: "Find a friend and introduce them to your favorite campus vegan food" },
+            { title: "Reach out to RIT's Dietician", detail: "Provide specific praise or feedback for hoe the vegan options on campus can be improved" },
+            { title: "Try a vegan meal on campus not already on this list" },
+            { title: "Create a \"silent vegan\" meal", detail: "no item in the meal can have \"vegan\" in the name as-sold" },
+            { title: "Insomnia Cookies", detail: "get an order of insomnia cookies delivered to campus" },
+            { title: "Use NetNutrition", detail: "Find a vegan dish you havent seen before on NetNutrition and try it" }
+        ]
     }
 
 }
