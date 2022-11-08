@@ -220,20 +220,30 @@ board_values = {
             { title: "Eat at the Brick City Vegan Bar", detail: "available during lunch at the station that does breakfast pancakes" },
             { title: "Share a Veggie/hummus tray with a friend" },
             { title: "Burrito with ROasted Veggies", detail: "from Salsaritas" },
-            { title: "Ask Nathans Soup and Salad for a menu and/or if they have anything vegan", detail: "Vegan club would like to know" },
-            { title: "Ask a Visiting Chef for a menu and/or if they have anything vegan", detail: "Vegan club would like to know" },
-            { title: "Ask a food truck for a menu and/or if they have anything vegan", detail: "Vegan club would like to know" },
+            { title: "Ask Nathans Soup and Salad for a menu and/or if they have anything vegan", detail: "Vegan club would like to know/encourage more vegan options here" },
+            { title: "Ask a Visiting Chef for a menu and/or if they have anything vegan", detail: "Vegan club would like to know/encourage more vegan options here" },
+            { title: "Ask a food truck for a menu and/or if they have anything vegan", detail: "Vegan club would like to know/encourage more vegan options here" },
             { title: "Get a sub with Vegeterian Chicken", detail: "from Ritz" },
             { title: "Buy the first vegan thing you see at the Corner store" },
             { title: "Try a beyond burger", detail: "available at Wegmans (frozen) and maybe Crossroads" },
             { title: "Get a pasta bake at Ritz" },
             { title: "Visit the wegmans Vegan and gluten free aisle and try something new", detail: "aisle 1B at the Hylan Dr. Wegmans" },
             { title: "Find a friend and introduce them to your favorite campus vegan food" },
-            { title: "Reach out to RIT's Dietician", detail: "Provide specific praise or feedback for hoe the vegan options on campus can be improved" },
+            { title: "Introduce yourself to a full time RIT dining employee", detail: "Ideas include managers, chefs, or the registered dietician. You may consider offering some specific praise or feedback for a particular vegan menu item" },
             { title: "Try a vegan meal on campus not already on this list" },
             { title: "Create a \"silent vegan\" meal", detail: "no item in the meal can have \"vegan\" in the name as-sold" },
             { title: "Insomnia Cookies", detail: "get an order of insomnia cookies delivered to campus" },
-            { title: "Use NetNutrition", detail: "Find a vegan dish you havent seen before on NetNutrition and try it" }
+            { title: "Use NetNutrition", detail: "Find a vegan dish you havent seen before on NetNutrition and try it" },
+            { title: "Find and join the vegan club discord" },
+            { title: "Attend a vegan club meeting" },
+            { title: "Try a plant based milk (oat/soy/rice/cashew)" },
+            { title: "Go to a rit sustainability event" },
+            { title: "Attend a meeting of the SG sustainability committee" },
+            { title: "Attend a meeting of the SG housing and dining committee" },
+            { title: "Watch a vegan documentary film", detail: "https://en.wikipedia.org/wiki/List_of_vegan_media"}
+            { title: "Buy a thrifted clothing item made without animal products", detail: "Goodwill, Amvets, and Salvation army are quite close to RIT" },
+            { title: "Research and make your own vegan recipe at home", detail: "This can be food, skincare products, or something else" }
+
         ]
     }
 
