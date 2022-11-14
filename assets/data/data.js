@@ -240,7 +240,7 @@ board_values = {
             { title: "Go to a rit sustainability event" },
             { title: "Attend a meeting of the SG sustainability committee" },
             { title: "Attend a meeting of the SG housing and dining committee" },
-            { title: "Watch a vegan documentary film", detail: "https://en.wikipedia.org/wiki/List_of_vegan_media"}
+            { title: "Watch a vegan documentary film", detail: "https://en.wikipedia.org/wiki/List_of_vegan_media"},
             { title: "Buy a thrifted clothing item made without animal products", detail: "Goodwill, Amvets, and Salvation army are quite close to RIT" },
             { title: "Research and make your own vegan recipe at home", detail: "This can be food, skincare products, or something else" }
 
