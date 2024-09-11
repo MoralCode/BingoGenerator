@@ -125,6 +125,46 @@ board_values = {
             { title: "Jammed gun or out of ammo" }
         ]
     },
+    uspoliticaldebate: {
+        name: "US Political Debate Bingo 2024",
+        tiles: [
+            { title: "Southern border wall and/or talks of border control" },
+            { title: "repeats a claim that the 2016 election was fake/illegitimate/rigged" },
+            { title: "reclassifying federal employees as political appointees (from project 2025)" },
+            { title: "he does the hand thing with bringing his wrists together" },
+            { title: "interrupts so much he gets called out for it", detail: "(i.e. \"would you just shut up man\")" },
+            { title: "mention of the trump assassination attempt" },
+            { title: "tax cuts for the wealthy" },
+            { title: "\"crooked joe\"" },
+            { title: "Trump's federal charges" },
+            { title: "gun violence or gun control discussed" },
+            { title: "calling liberal Democrat policy stupid" },
+            { title: "\"they don't know what they're doing\"" },
+            { title: "talks about no tax on tip" },
+            { title: "interrupting opponent (Kamala) when she's speaking " },
+            { title: "general anti-immigrant/xenophobic/racist comments" },
+            { title: "technically answers the question but the answer is useless/doesnt really answer the question" },
+            { title: "Trump claiming Americans love him" },
+            { title: "mention of polling results in a comaprative \"who is winning\" way" },
+            { title: "mention of Joe Biden" },
+            { title: "attack on Kamala personal character (ad hominem)" },
+            { title: "claiming the opponent is afriad to debate" },
+            { title: "talk about China" },
+            { title: "talk about covid being from china" },
+            { title: "Argument Flooding" },
+            { title: "deflect questions about Israel" },
+            { title: "We should send ukraine aid" },
+            { title: "we should not send ukraine aid" },
+            { title: "someone is speechless because of a moment of utter stupidity" },
+            { title: "Comparison to other world leaders" },
+            { title: "misinformation is mentioned" },
+            { title: "misinformation is perpetuated" },
+            { title: "reference to roe v wade or its overturning case" },
+            { title: "questioning Kamala's black/racial identity" },
+            { title: "a wardrobe malfunction or trump hair moment" },
+
+        ]
+    },
     queen: {
         name: "The Queen's Speech Bingo",
         tiles: [
