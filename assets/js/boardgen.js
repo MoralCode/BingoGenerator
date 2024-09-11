@@ -321,14 +321,10 @@ generateButtonElement.onclick = () => {
     tiles = board_values[gameTypeElement.value].tiles
     custom_img = board_values[gameTypeElement.value].image
 
+    var win = window.open('', '_blank');
     getPDFTemplate(boardCountElement.value, tiles, custom_img)
-        .then((template) => pdfMake.createPdf(template).getDataUrl(
-            (dataUrl) => {
-                var iframe = document.createElement('iframe');
-                iframe.src = dataUrl;                
-                replaceInlinePDFWith(iframe)
-            })
-        );
+        .then((template) => pdfMake.createPdf(template).print({}, win));
+
 }
 
 
