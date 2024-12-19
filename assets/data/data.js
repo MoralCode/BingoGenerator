@@ -125,46 +125,6 @@ board_values = {
             { title: "Jammed gun or out of ammo" }
         ]
     },
-    uspoliticaldebate: {
-        name: "US Political Debate Bingo 2024",
-        tiles: [
-            { title: "Southern border wall and/or talks of border control" },
-            { title: "repeats a claim that the 2016 election was fake/illegitimate/rigged" },
-            { title: "reclassifying federal employees as political appointees (from project 2025)" },
-            { title: "he does the hand thing with bringing his wrists together" },
-            { title: "interrupts so much he gets called out for it", detail: "(i.e. \"would you just shut up man\")" },
-            { title: "mention of the trump assassination attempt" },
-            { title: "tax cuts for the wealthy" },
-            { title: "\"crooked joe\"" },
-            { title: "Trump's federal charges" },
-            { title: "gun violence or gun control discussed" },
-            { title: "calling liberal Democrat policy stupid" },
-            { title: "\"they don't know what they're doing\"" },
-            { title: "talks about no tax on tip" },
-            { title: "interrupting opponent (Kamala) when she's speaking " },
-            { title: "general anti-immigrant/xenophobic/racist comments" },
-            { title: "technically answers the question but the answer is useless/doesnt really answer the question" },
-            { title: "Trump claiming Americans love him" },
-            { title: "mention of polling results in a comaprative \"who is winning\" way" },
-            { title: "mention of Joe Biden" },
-            { title: "attack on Kamala personal character (ad hominem)" },
-            { title: "claiming the opponent is afriad to debate" },
-            { title: "talk about China" },
-            { title: "talk about covid being from china" },
-            { title: "Argument Flooding" },
-            { title: "deflect questions about Israel" },
-            { title: "We should send ukraine aid" },
-            { title: "we should not send ukraine aid" },
-            { title: "someone is speechless because of a moment of utter stupidity" },
-            { title: "Comparison to other world leaders" },
-            { title: "misinformation is mentioned" },
-            { title: "misinformation is perpetuated" },
-            { title: "reference to roe v wade or its overturning case" },
-            { title: "questioning Kamala's black/racial identity" },
-            { title: "a wardrobe malfunction or trump hair moment" },
-
-        ]
-    },
     queen: {
         name: "The Queen's Speech Bingo",
         tiles: [
@@ -242,48 +202,6 @@ board_values = {
             { title:"Ominous fog" }, //Yep, we’re walking through the forest, parking lot, etc., and a ridiculously thick and visible fog rolls in !Nobody sees it.Nobody worries about it.Nobody even friggin’ mentions it! As a viewer all you can say is, “Gee, wonder if somethin’ bad is about to happen ?” Blech!!
             { title:"Vehicle trouble" }, //The engine to my car won’t start when I most need it to.Like when I’m about to get killed for example.Do car engines have minds of their own and just like to fuck with their owners ? They’re probably laughing the whole time as the hapless victim is frantically turning the key and only getting a chug chug chug.Seriously, though, instead of trimming the gore or nudity in a movie, they should be forced to trim the dumb parts like cars not starting.
             { title:"Electricity", detail: "Blue lightning, shaking" } //Marvel at it and all of its BLUENESS! Noticed this one just the other day.Many a time has a baddie(or group of baddies) been sent back to hell via a nice flesh - searing electrical shock.And although electrocution is a gruesome way to check out, it doesn’t make for a very visibly gory death.So what did the movie makers come up with? Make it BLUE! But why stop there ? Along with making it blue, let’s make it course up and down the body for maybe to seconds! And of course there must be a funny dance performed by the one being fried.It’s really quite silly since in reality being electrocuted does not last a full minute, and the current is definitely not visible to anybody who happens to be viewing it as it occurs.Also, if you watch closely, sometimes the person being zapped is either grounded or not in position to complete a circuit.Thus, they would have been fine anyways.But hey, it sure is fun watching ’em do that funny dance!
-        ]
-    },
-    ritvegan: {
-        name: "RIT Vegan Dining Bingo",
-        default: false,
-        image: "assets/media/veganbingo.png",
-        tiles: [
-            { title: "Vegan Foccacia bread", detail: "from Artesano's" },
-            { title: "Non-Dairy Ice Cream", detail: "from Ben and Jerry's with a sugar cone or cup." },
-            { title: "Tempeh BLT", detail: "from Midnight Oil" },
-            { title: "Something from Gracies", detail: "Please tell vegan club if you cannot complete this" },
-            { title: "Something that is both vegan and gluten free", detail: "Let Vegan Club know if this is hard to find." },
-            { title: "Vegan Breakfast Sandwich", detail: "from Brick City. You may have to request and wait longer for this" },
-            { title: "Vegan Breakfast Burrito", detail: "from Artesanos, may also be available other places" },
-            { title: "A Vegan Smoothie", detail: "from Beanz or elsewhere" },
-            { title: "Eat at the Brick City Vegan Bar", detail: "available during lunch at the station that does breakfast pancakes" },
-            { title: "Share a Veggie/hummus tray with a friend" },
-            { title: "Burrito with ROasted Veggies", detail: "from Salsaritas" },
-            { title: "Ask Nathans Soup and Salad for a menu and/or if they have anything vegan", detail: "Vegan club would like to know/encourage more vegan options here" },
-            { title: "Ask a Visiting Chef for a menu and/or if they have anything vegan", detail: "Vegan club would like to know/encourage more vegan options here" },
-            { title: "Ask a food truck for a menu and/or if they have anything vegan", detail: "Vegan club would like to know/encourage more vegan options here" },
-            { title: "Get a sub with Vegeterian Chicken", detail: "from Ritz" },
-            { title: "Buy the first vegan thing you see at the Corner store" },
-            { title: "Try a beyond burger", detail: "available at Wegmans (frozen) and maybe Crossroads" },
-            { title: "Get a pasta bake at Ritz" },
-            { title: "Visit the wegmans Vegan and gluten free aisle and try something new", detail: "aisle 1B at the Hylan Dr. Wegmans" },
-            { title: "Find a friend and introduce them to your favorite campus vegan food" },
-            { title: "Introduce yourself to a full time RIT dining employee", detail: "Ideas include managers, chefs, or the registered dietician. You may consider offering some specific praise or feedback for a particular vegan menu item" },
-            { title: "Try a vegan meal on campus not already on this list" },
-            { title: "Create a \"silent vegan\" meal", detail: "no item in the meal can have \"vegan\" in the name as-sold" },
-            { title: "Insomnia Cookies", detail: "get an order of insomnia cookies delivered to campus" },
-            { title: "Use NetNutrition", detail: "Find a vegan dish you havent seen before on NetNutrition and try it" },
-            { title: "Find and join the vegan club discord" },
-            { title: "Attend a vegan club meeting" },
-            { title: "Try a plant based milk (oat/soy/rice/cashew)" },
-            { title: "Go to a rit sustainability event" },
-            { title: "Attend a meeting of the SG sustainability committee" },
-            { title: "Attend a meeting of the SG housing and dining committee" },
-            { title: "Watch a vegan documentary film", detail: "https://en.wikipedia.org/wiki/List_of_vegan_media"},
-            { title: "Buy a thrifted clothing item made without animal products", detail: "Goodwill, Amvets, and Salvation army are quite close to RIT" },
-            { title: "Research and make your own vegan recipe at home", detail: "This can be food, skincare products, or something else" }
-
         ]
     },
     conversationstarter: {
@@ -391,5 +309,4 @@ board_values = {
             { "title": "Tell your partner something that you like about them already.", "detail": "", "source": "", "note": "From RIT Health Promotion getting to know you speed-friending game question list"},
         ]
     }
-
 }
